@@ -1,0 +1,38 @@
+13848 - 2020-09-14 09:12:18,204 -root - DEBUG - Starting the application
+13848 - 2020-09-14 09:12:18,217 -werkzeug - WARNING -  * Debugger is activ8100 - 2020-09-14 09:14:51,357 -werkzeug - INFO -  * Restarting with stat
+-248-498
+13848 - 2020-09-14 09:12:18,247 -werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+13848 - 2020-09-14 09:14:51,311 -werkzeug - INFO -  * Detected change in 'G:\\Python\\Flask\\app.py', reloading
+4644 - 2020-09-14 09:14:52,702 -root - DEBUG - Starting the application
+4644 - 2020-09-14 09:14:52,723 -werkzeug - WARNING -  * Debugger is active!
+4644 - 2020-09-14 09:14:52,738 -werkzeug - INFO -  * Debugger PIN: 198-248-498
+4644 - 2020-09-14 09:14:52,765 -werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+14620 - 2020-09-14 09:14:58,831 -root - DEBUG - Starting the application
+14620 - 2020-09-14 09:14:58,855 -werkzeug - INFO -  * Restarting with stat
+10640 - 2020-09-14 09:14:59,771 -root - DEBUG - Starting the application
+10640 - 2020-09-14 09:14:59,785 -werkzeug - WARNING -  * Debugger is active!
+10640 - 2020-09-14 09:14:59,794 -werkzeug - INFO -  * Debugger PIN: 198-248-498
+10640 - 2020-09-14 09:14:59,813 -werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10640 - 2020-09-14 09:17:01,397 -werkzeug - INFO -  * Detected change in 'G:\\Python\\Flask\\app.py', reloading
+14620 - 2020-09-14 09:17:01,444 -werkzeug - INFO -  * Restarting with stat
+17248 - 2020-09-14 09:17:02,758 -root - DEBUG - Starting the application
+7324 - 2020-09-14 09:17:28,975 -root - DEBUG - Starting the application
+7324 - 2020-09-14 09:17:29,004 -werkzeug - INFO -  * Restarting with stat
+7928 - 2020-09-14 09:17:29,797 -root - DEBUG - Starting the application
+7928 - 2020-09-14 09:17:29,842 -werkzeug - WARNING -  * Debugger is active!
+7928 - 2020-09-14 09:17:29,902 -werkzeug - INFO -  * Debugger PIN: 198-248-498
+7928 - 2020-09-14 09:17:29,976 -werkzeug - INFO -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+7928 - 2020-09-14 09:17:50,767 -werkzeug - INFO -  * Detected change in 'G:\\Python\\Flask\\app.py', reloading
+7324 - 2020-09-14 09:17:50,822 -werkzeug - INFO -  * Restarting with stat
+1300 - 2020-09-14 09:42:08,427 -root - DEBUG - Starting the application
+7192 - 2020-09-14 09:42:26,681 -root - DEBUG - Starting the application
+7192 - 2020-09-14 09:42:26,717 -werkzeug - INFO -  * Restarting with stat
+17936 - 2020-09-14 09:42:27,716 -root - DEBUG - Starting the application
+17936 - 2020-09-14 09:42:27,732 -werkzeug - WARNING -  * Debugger is active!
+17936 - 2020-09-14 09:42:27,743 -werkzeug - INFO -  * Debugger PIN: 198-248-498
+17936 - 2020-09-14 09:42:27,780 -werkzeug - INFO -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+17936 - 2020-09-14 09:42:38,197 -werkzeug - INFO - 127.0.0.1 - - [14/Sep/2020 09:42:38] "[33mGET /user HTTP/1.1[0m" 404 -
+17936 - 2020-09-14 09:43:02,984 -werkzeug - INFO -  * Detected change in 'G:\\Python\\Flask\\app.py', reloading
+7192 - 2020-09-14 09:43:03,138 -werkzeug - INFO -  * Restarting with stat
+7192 - 2020-09-14 09:43:06,451 -werkzeug - INFO -  * Restarting with stat
+7192 - 2020-09-14 09:43:08,726 -werkzeug - INFO -  * Restarting with stat
