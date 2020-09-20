@@ -1,5 +1,5 @@
 from flask import Flask, request
-from flask_restful import Resource, Api
+from flask_restful import Resource, Api, reqparse
 from flask_jwt import JWT, jwt_required
 import logging as logger
 import dotenv
@@ -38,7 +38,11 @@ class Item(Resource):
         return {"message": "item removed"}
 
     def put(self, name):
-        data = request.get_json()
+        parser = reqparse.RequestParser()
+        parser.add_argument('name', type=str, required=True, help="Name field can't be blank!!")
+        parser.add_argument('price', type=int, required=True, help="Price field can't be blank!!")
+        data = parser.parse_args()
+        
         item = next(filter(lambda item: item['name'] == name, items), None)
         if item:
             item.update(data)
