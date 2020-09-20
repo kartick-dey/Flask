@@ -12,12 +12,15 @@ class UserController(Resource):
                 sql = "SELECT * FROM user_data"
                 cursor.execute(sql)
                 result = cursor.fetchall()
+                logger.info("Fetched data: {}".format(result))
                 return result
         except Expression as e:
+            logger.error("Exception is occure : {}".format(e))
             return e
 
         finally:
             connection.close()
+            logger.info("Connection successfully closed!")
             return {"Message": "Get from method"}, 200
 
     def post(self):
