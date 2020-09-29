@@ -7,10 +7,8 @@ import os
 from security import authenticate, indentity
 from resources.user_register import UserRegister
 from resources.item import Item, ItemList
-# from controllers.userController import User, UserList
 
-logger.basicConfig(level=logger.DEBUG)
-# logger.basicConfig(filename='app.log', filemode='a' ,level=logger.DEBUG, format='%(process)d - %(asctime)s -%(name)s - %(levelname)s - %(message)s')
+logger.basicConfig(filename='app.log', filemode='a' ,level=logger.DEBUG, format='%(process)d - %(asctime)s -%(name)s - %(levelname)s - %(message)s')
 
 appInstance = Flask(__name__)
 appInstance.secret_key = os.getenv("APP_SECRETE_KEY")

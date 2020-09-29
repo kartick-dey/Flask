@@ -1,7 +1,7 @@
 from flask_restful import Resource, reqparse
 import logging as logger
 from config.database_connection import DBConnection
-from models.user import User
+from models.user import UserModel
 
 class UserRegister(Resource):
     parser = reqparse.RequestParser()
@@ -14,7 +14,7 @@ class UserRegister(Resource):
         logger.info("POST method called from UserRegister Resource")
         data = cls.parser.parse_args()
         """ Check the user is exixts or not."""
-        if User.find_by_username(data['username']):
+        if UserModel.find_by_username(data['username']):
             return {"message": "Username already exists!"}, 400
 
         """ Connecting to the db server"""
@@ -26,9 +26,10 @@ class UserRegister(Resource):
                 cursor.execute(sql, (data['username'], data['password']))
                 connection.commit()
                 logger.info("Inserted data: ", data)
+                connection.close()
+                logger.info("Connection closed!")
+                return {"message": "User created successfully."}, 201
         except Exception as e:
             logger.exception(e)
-        finally:
-            connection.close()
-            logger.info("Connection closed!")
-            return {"message": "User created successfully."}, 201
+            return {"message": "Internal server error.", "error": e}, 500
+            

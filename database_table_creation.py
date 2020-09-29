@@ -1,3 +1,4 @@
+import pymysql
 from config.database_connection import DBConnection
 
 connection = DBConnection.db_connection()
@@ -5,12 +6,13 @@ connection = DBConnection.db_connection()
 def create_table():
     try:
         with connection.cursor() as cursor:
-            create_table_query = "CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY, username VARCHAR(64) NOT NULL, password VARCHAR(255) NOT NULL)"
+            # create_table_query = "CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY, username VARCHAR(64) NOT NULL, password VARCHAR(255) NOT NULL)"
+            create_table_query = "CREATE TABLE items (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(64) NOT NULL, price INT(25) NOT NULL)"
             cursor.execute(create_table_query)
             connection.commit()
             print('Table created')
-    except expression as identifier:
-        print("Exception: ", identifier)
+    except pymysql.MySQLError as e:
+        print("Exception: ", e)
 
     finally:
         connection.close()
@@ -32,5 +34,5 @@ def insert_data():
         print("Connection closed!")
 
 
-# create_table()
-insert_data()
+create_table()
+# insert_data()

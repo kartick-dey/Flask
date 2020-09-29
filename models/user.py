@@ -2,9 +2,7 @@ import pymysql
 import logging as logger
 from config.database_connection import DBConnection
 
-connection = DBConnection.db_connection()
-
-class User:
+class UserModel:
     def __init__(self, _id, username, password):
         self.id = _id
         self.username = username
@@ -13,6 +11,7 @@ class User:
     @classmethod
     def find_by_username(cls, username):
         logger.debug("'find_by_username' function called!")
+        connection = DBConnection.db_connection()
         try:
             with connection.cursor() as cursor:
                 sql = "SELECT * FROM users WHERE username = %s"
@@ -24,18 +23,19 @@ class User:
                 else:
                     user = None
 
-                logger.info("Return value from find_by_username: ", user)
+                connection.close()
+                logger.info("Conncetion closed!")
+                logger.info("Return value from find_by_username: {}".format(user))
                 return user
 
         except pymysql.MySQLError as e:
             logger.exception(e)
-        finally:
-            connection.close()
-            logger.info("Conncetion closed!")
+            
 
     @classmethod
     def find_by_id(cls, _id):
         logger.debug("'find_by_id' function called!")
+        connection = DBConnection.db_connection()
         try:
             with connection.cursor() as cursor:
                 sql = "SELECT * FROM users WHERE id = %s"
@@ -47,13 +47,13 @@ class User:
                 else:
                     user = None
 
-                logger.info("Return value from find_by_id: ", user)
+                connection.close()
+                logger.info("Conncetion closed!")
+                logger.info("Return value from find_by_id: {}".format(user))
                 return user
 
         except pymysql.MySQLError as e:
             logger.exception(e)
-        finally:
-            connection.close()
-            logger.info("Conncetion closed!")
+            
 
     
